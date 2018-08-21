@@ -15,7 +15,7 @@ export class IftarServiceProvider {
   private gpsListRef = this.db.list<locationsInfo>('iftarmap');
 
   constructor(public db: AngularFireDatabase) {
-    console.log('Hello IftarServiceProvider Provider');
+    // console.log('Hello IftarServiceProvider Provider');
   }
 
   getLocationList() {
@@ -27,8 +27,8 @@ export class IftarServiceProvider {
   updateIftarPlace(location: locationsInfo) {
     return this.gpsListRef.update(location.key, location);
   }
-  removeIftarPlace(location: locationsInfo) {
-    return this.gpsListRef.remove(location.key);
+  removeIftarPlace(key) {
+    return this.gpsListRef.remove(key);
   }
 
 }

@@ -15,21 +15,21 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let item of iftarLocation">
       <ion-item>
         <ion-avatar item-start>
           <img src="../../assets/icon/placeholder.svg">
         </ion-avatar>
-        <h2>Slimer</h2>
+        <h2>{{item[1]['info']}}</h2>
       </ion-item>
       <ion-item-options side="left">
-        <button ion-button color="primary">
+        <button ion-button color="primary" (click)="showPrompt(item)">
           <ion-icon name="ios-create"></ion-icon>
           Edit
         </button>
       </ion-item-options>
       <ion-item-options side="right">
-        <button ion-button color="danger">
+        <button ion-button color="danger" (click)="removeLocation(item[0])">
           <ion-icon name="ios-trash"></ion-icon>
           Delete
         </button>

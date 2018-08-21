@@ -1,5 +1,5 @@
 import { HomePage } from './../home/home';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { locationsInfo } from './../../module/locationInof';
@@ -54,7 +54,7 @@ export class GiftplacemodfyPage {
       console.log('Location update')
       this.navCtrl.setRoot(HomePage)
     })
-  }
+  } 
 
   removeLocation(key) {
     this.giftService.removeGiftPlace(key).then(() => {

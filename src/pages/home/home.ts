@@ -24,7 +24,7 @@ export class HomePage {
     this.navCtrl.push(IftarplacePage);
   }
   goTo_showIftarPage() {
-    console.log('goTo_showIftarPage');
+    // console.log('goTo_showIftarPage');
     this.navCtrl.push(IftarplacemodifyPage);
   }
   goTo_showGiftsPage() {
